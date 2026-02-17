@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Dragon — Auténtica Comida China</title>
+    <meta name="description"
+        content="Golden Dragon — Restaurante de auténtica comida china. Sabores milenarios con ingredientes frescos y técnicas tradicionales." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- ===== Navigation ===== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">龍</span>
+                <span class="logo-text">Golden Dragon</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="#reservar" class="btn btn-primary nav-cta">Reservar Mesa</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== Hero ===== -->
+    <header id="inicio" class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1600&q=80" alt="Comida china"
+                class="hero-img" />
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tag" data-animate="fade-up">— Auténtica Cocina China —</p>
+            <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                Sabores que<br />Cruzan <span class="text-accent">Fronteras</span>
+            </h1>
+            <p class="hero-desc" data-animate="fade-up" data-delay="200">
+                Técnicas milenarias, ingredientes frescos y una experiencia culinaria que transporta tus sentidos al
+                corazón de China.
+            </p>
+            <div class="hero-actions" data-animate="fade-up" data-delay="300">
+                <a href="#menu" class="btn btn-primary btn-lg">Explorar Menú</a>
+                <a href="#nosotros" class="btn btn-outline btn-lg">Nuestra Historia</a>
+            </div>
+            <div class="hero-stats" data-animate="fade-up" data-delay="400">
+                <div class="stat">
+                    <span class="stat-number" data-count="15">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Años de Experiencia</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="50">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Platos Únicos</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="10000">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Clientes Felices</span>
+                </div>
+            </div>
+        </div>
+        <a href="#menu" class="scroll-indicator" aria-label="Scroll abajo">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
+        </a>
+    </header>
+
+    <!-- ===== Categorías ===== -->
+    <section class="categories-strip">
+        <div class="container">
+            <div class="categories-grid">
+                <button class="category-chip active" data-category="todos">
+                    <span class="chip-icon">🥢</span> Todos
+                </button>
+                <button class="category-chip" data-category="entradas">
+                    <span class="chip-icon">🥟</span> Entradas
+                </button>
+                <button class="category-chip" data-category="principales">
+                    <span class="chip-icon">🍜</span> Principales
+                </button>
+                <button class="category-chip" data-category="sopas">
+                    <span class="chip-icon">🍲</span> Sopas
+                </button>
+                <button class="category-chip" data-category="postres">
+                    <span class="chip-icon">🍡</span> Postres
+                </button>
+                <button class="category-chip" data-category="bebidas">
+                    <span class="chip-icon">🍵</span> Bebidas
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Menú ===== -->
+    <section id="menu" class="section menu-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Nuestro Menú</p>
+                <h2 class="section-title">Platos <span class="text-accent">Destacados</span></h2>
+                <p class="section-desc">Cada plato es una obra maestra elaborada con ingredientes seleccionados y
+                    técnicas ancestrales.</p>
+            </div>
+            <div class="menu-grid" id="menuGrid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Nosotros ===== -->
+    <section id="nosotros" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images" data-animate="fade-right">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80"
+                            alt="Interior del restaurante" />
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=600&q=80"
+                            alt="Preparación de comida" />
+                    </div>
+                    <div class="about-badge">
+                        <span class="badge-number">15</span>
+                        <span class="badge-text">Años de<br />Tradición</span>
+                    </div>
+                </div>
+                <div class="about-content" data-animate="fade-left">
+                    <p class="section-tag">Nuestra Historia</p>
+                    <h2 class="section-title text-left">Un Viaje de <span class="text-accent">Sabores</span> Milenarios
+                    </h2>
+                    <p class="about-text">
+                        Fundado en 2011, Golden Dragon nació del sueño de traer los sabores más auténticos de las
+                        provincias de Sichuan, Cantón y Beijing a tu mesa. Cada receta ha sido perfeccionada durante
+                        generaciones, manteniendo la esencia de la cocina china tradicional.
+                    </p>
+                    <p class="about-text">
+                        Nuestros ingredientes son cuidadosamente seleccionados: especias importadas directamente de
+                        China, vegetales frescos de productores locales, y carnes de la más alta calidad.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">🌿</div>
+                            <div>
+                                <h4>Ingredientes Frescos</h4>
+                                <p>Seleccionados diariamente para garantizar la máxima calidad.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">👨‍🍳</div>
+                            <div>
+                                <h4>Chefs Expertos</h4>
+                                <p>Formados en las mejores escuelas culinarias de Asia.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🏮</div>
+                            <div>
+                                <h4>Ambiente Auténtico</h4>
+                                <p>Decoración que te transporta al corazón de China.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Parallax Banner ===== -->
+    <section class="parallax-banner">
+        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1600&q=80" alt="Cocina china"
+            class="parallax-img" />
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <p class="parallax-tag">Experiencia Única</p>
+            <h2 class="parallax-title">Donde la Tradición se une al <span class="text-accent-light">Arte
+                    Culinario</span></h2>
+            <a href="#reservar" class="btn btn-primary btn-lg">Reservar Ahora</a>
+        </div>
+    </section>
+
+
+    <!-- ===== Testimonios ===== -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Testimonios</p>
+                <h2 class="section-title">Lo que Dicen Nuestros <span class="text-accent">Clientes</span></h2>
+            </div>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"La mejor comida china que he probado fuera de China. Los dumplings
+                            son absolutamente perfectos, y el ambiente del restaurante es increíble."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MC</div>
+                            <div>
+                                <h4>María Castillo</h4>
+                                <p>Cliente Frecuente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"El pato Pekín es una obra de arte. Cada visita es una experiencia
+                            gastronómica que supera todas mis expectativas. ¡Altamente recomendado!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RL</div>
+                            <div>
+                                <h4>Roberto López</h4>
+                                <p>Food Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Celebramos nuestro aniversario aquí y fue mágico. El servicio es
+                            impecable y la sopa wonton es la mejor que he probado en mi vida."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AG</div>
+                            <div>
+                                <h4>Ana González</h4>
+                                <p>Cliente desde 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevBtn" aria-label="Anterior">‹</button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn" id="nextBtn" aria-label="Siguiente">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Reservar ===== -->
+    <section id="reservar" class="section reservation-section">
+        <div class="container">
+            <div class="reservation-grid">
+                <div class="reservation-info" data-animate="fade-right">
+                    <p class="section-tag">Reservaciones</p>
+                    <h2 class="section-title text-left">Reserva tu <span class="text-accent">Experiencia</span></h2>
+                    <p class="reservation-desc">Asegura tu mesa y déjanos preparar una experiencia gastronómica
+                        inolvidable para ti y tus acompañantes.</p>
+                    <div class="reservation-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📍</span>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Av. Principal #123, Centro Histórico</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🕐</span>
+                            <div>
+                                <h4>Horario</h4>
+                                <p>Lun - Dom: 12:00 PM - 11:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📞</span>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+52 (55) 1234-5678</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="reservation-form" id="reservationForm" data-animate="fade-left">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" placeholder="Tu nombre" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="tu@email.com" required />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Fecha</label>
+                            <input type="date" id="date" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Hora</label>
+                            <input type="time" id="time" required />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guests">Número de Personas</label>
+                            <select id="guests" required>
+                                <option value="">Seleccionar</option>
+                                <option value="1">1 Persona</option>
+                                <option value="2">2 Personas</option>
+                                <option value="3">3 Personas</option>
+                                <option value="4">4 Personas</option>
+                                <option value="5">5 Personas</option>
+                                <option value="6">6+ Personas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="occasion">Ocasión</label>
+                            <select id="occasion">
+                                <option value="">Seleccionar (Opcional)</option>
+                                <option value="cumpleanos">Cumpleaños</option>
+                                <option value="aniversario">Aniversario</option>
+                                <option value="negocios">Cena de Negocios</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje Adicional</label>
+                        <textarea id="message" rows="3"
+                            placeholder="Alergias, preferencias, peticiones especiales..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-full">Confirmar Reservación</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section id="contacto" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Encuéntranos</p>
+                <h2 class="section-title">Visítanos en Nuestro <span class="text-accent">Restaurante</span></h2>
+            </div>
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661404113295!2d-99.1332049!3d19.4326077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sZocalo!5e0!3m2!1ses-419!2smx!4v1704067200000!5m2!1ses-419!2smx"
+                    width="100%" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Golden Dragon"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">龍</span>
+                        <span class="logo-text">Golden Dragon</span>
+                    </a>
+                    <p class="footer-desc">Auténtica cocina china con ingredientes frescos y técnicas ancestrales. Una
+                        experiencia que transporta tus sentidos.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Aviso de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Horario</h4>
+                    <ul class="schedule-list">
+                        <li><span>Lunes - Viernes</span><span>12:00 - 23:00</span></li>
+                        <li><span>Sábado</span><span>11:00 - 00:00</span></li>
+                        <li><span>Domingo</span><span>11:00 - 22:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Golden Dragon. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== Toast ===== -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-msg" id="toastMsg">¡Reservación confirmada!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
